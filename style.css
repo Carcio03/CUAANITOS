@@ -1,0 +1,209 @@
+/* Colores principales */
+:root {
+  --primary-color: #a0132d; /* Rojo profundo */
+  --secondary-color: #5b1b6d; /* Morado oscuro */
+  --light-color: #ffffff; /* Blanco */
+  --dark-color: #111111; /* Negro */
+}
+
+/* Estilo global */
+body {
+  color: var(--dark-color); /* Color de texto principal */
+  font-family: "Roboto", sans-serif;
+  background-color: #f2f2f2; /* Fondo claro */
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo de la barra de navegación */
+.navbar {
+  background-color: var(--primary-color);
+}
+
+.navbar-brand {
+  font-size: 30px;
+  color: var(--light-color);
+}
+
+.nav-link {
+  color: var(--light-color);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--secondary-color);
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+  border: none;
+  color: var(--light-color);
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color);
+}
+
+/* Sección de encabezado / hero */
+.hero-section {
+  background-image: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+  color: var(--light-color);
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 62px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero-section p {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 20px 0;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+.hero-section .btn-primary {
+  margin-top: 30px;
+  padding: 15px 40px;
+  font-size: 20px;
+  animation: fadeInUp 2s ease forwards;
+}
+
+/* Animación de fade in y slide hacia arriba */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo de la imagen en la sección principal */
+.img-llamativa img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInZoom 2s ease forwards;
+}
+
+.img-llamativa:hover img {
+  transform: scale(1.05) translate(10px, -10px) rotate(3deg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación de aparición (fade in + zoom) */
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Sección de características */
+.features-section {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.features-section h2 {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.features-section .card {
+  border: none;
+  text-align: center;
+  background-color: var(--light-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 40px 20px;
+}
+
+.features-section .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.features-section .card h3 {
+  color: var(--primary-color);
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.features-section .card p {
+  color: #777;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Sección de productos */
+.products-section {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+}
+
+.products-section h2 {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.products-section img {
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.products-section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de preguntas frecuentes */
+.accordion-button {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+}
+
+.accordion-body {
+  font-size: 18px;
+}
+
+/* Footer */
+.footer-section {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-section p {
+  font-size: 16px;
+}
+
